@@ -1,0 +1,93 @@
+@CHARSET "UTF-8";
+
+/*  Layout for all pages the use the standard header, footer and menu logic.
+    This is the structural CSS for the /application/layouts/scripts/layout.phtml
+    file.
+
+  +-----------------------------------------------------------------------------+
+  |                                                                             |
+  |                                 #header                                     |
+  |                                                                             |
+  |                                                                             |
+  |-----------------------------------------------------------------------------|
+  |                                                                            ^|
+  |                                                                            H|
+  |                                                                            H|
+  |                                                                            H|
+  |                                #mainContent                                H|
+  |                                                                            H|
+  |                                                                            H|
+  |                                                                            H|
+  |                                                                            H|
+  |                                                                            v|
+  |<==========================================================================> |
+  |-----------------------------------------------------------------------------|
+  |                                 #footer                                     |
+  +-----------------------------------------------------------------------------+
+
+  NOTES: header, mainContent and footer ID's are reserved for this body layout!!
+  We are in essence wrapping all our pages in this new body layout.
+*/
+
+html, body {
+	font:12px arial,sans-serif;
+	overflow:hidden;
+}
+
+#header {
+	position:absolute; 
+	top:0; 
+	left:0; 
+	height:84px;        /* Our header is 84 px high */
+	width:100%;
+	background-color: #f2f2f2;
+	z-index:1000;			/* push our menu over the the #mainContent */
+}
+
+#mainContent {
+	overflow:auto;      /* Let the scroll bars wrap the mainContent div not the body */
+	position:absolute;   /* The mainBody is set in stone */
+	top:84px;   			/* Start our mainContent below the header */
+	left: 0px; 
+	right:0px;  			/* This may not be right or needed */
+	bottom:18px;        /* This may not be right or needed */
+	width:100%;
+	/*z-index:1;*/
+}
+
+#footer {
+	overflow:hidden; 
+	position:absolute; 
+	bottom:0; 
+	left:0; 
+	height:17px;        /* Footer is 10px high */
+	width:100%;
+	background-color: #f2f2f2;
+	z-index:0;
+	border-top: 1px solid rgb(231, 231, 231);
+}
+
+
+/* Boilerplate start here */
+.page-break  { display: none; } /* Used for putting page breaks in printout of site */
+
+.center { 					/* Center for bootstrap */
+	float: none;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+
+.full-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+
+

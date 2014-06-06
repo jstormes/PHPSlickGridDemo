@@ -1,0 +1,347 @@
+
+ul.appmenu {
+	margin: 0;
+	border: 0 none;
+	padding: 0;
+	/*width: 500px;*/ /*For KHTML*/
+	list-style: none;
+	height: 24px;
+	float: right; 
+	
+	margin-top: -1px;
+	}
+
+ul.appmenu li {
+	margin: 0;
+	border: 0 none;
+	padding: 0;
+	float: left; /*For Gecko*/
+	display: inline;
+	list-style: none;
+	position: relative;
+	height: 24px;
+	z-index:3;  /* needed to push menu over SlickGrid */
+	}
+
+ul.appmenu ul {
+	margin: 0;
+	border: 0 none;
+	padding: 0;
+	width: 120px;
+	list-style: none;
+	display: none;
+	position: absolute;
+	top: 20px;
+	left: -90px;
+	}
+
+ul.appmenu ul:after /*From IE 7 lack of compliance*/{
+	clear: both;
+	display: block;
+	font: 1px/0px serif;
+	content: ".";
+	height: 0;
+	visibility: hidden;
+	}
+
+ul.appmenu ul li {
+	width: 120px;
+	float: left; /*For IE 7 lack of compliance*/
+	display: block !important;
+	display: inline; /*For IE*/
+	}
+
+/* Root Menu */
+ul.appmenu a {
+	border: 1px solid #FFF;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	padding: 0 6px;
+	float: none !important; /*For Opera*/
+	float: left; /*For IE*/
+	display: block;
+	/*background: #EEE;*/
+	color: #666;
+	font: bold 10px/22px Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	height: auto !important;
+	height: 1%; /*For IE*/
+	}
+
+/* Root Menu Hover Persistence */
+ul.appmenu a:hover,
+ul.appmenu li:hover a,
+ul.appmenu li.iehover a {
+	/* background: #CCC; */
+	color: #FFF;
+	}
+
+/* 2nd Menu */
+ul.appmenu li:hover li a,
+ul.appmenu li.iehover li a {
+	float: none;
+	background: #EEE;
+	color: #666;
+	}
+
+/* 2nd Menu Hover Persistence */
+ul.appmenu li:hover li a:hover,
+ul.appmenu li:hover li:hover a,
+ul.appmenu li.iehover li a:hover,
+ul.appmenu li.iehover li.iehover a {
+	background: #CCC;
+	color: #FFF;
+	}
+
+/* 3rd Menu */
+ul.appmenu li:hover li:hover li a,
+ul.appmenu li.iehover li.iehover li a {
+	background: #EEE;
+	color: #666;
+	}
+
+/* 3rd Menu Hover Persistence */
+ul.appmenu li:hover li:hover li a:hover,
+ul.appmenu li:hover li:hover li:hover a,
+ul.appmenu li.iehover li.iehover li a:hover,
+ul.appmenu li.iehover li.iehover li.iehover a {
+	background: #CCC;
+	color: #FFF;
+	}
+
+/* 4th Menu */
+ul.appmenu li:hover li:hover li:hover li a,
+ul.appmenu li.iehover li.iehover li.iehover li a {
+	background: #EEE;
+	color: #666;
+	}
+
+/* 4th Menu Hover */
+ul.appmenu li:hover li:hover li:hover li a:hover,
+ul.appmenu li.iehover li.iehover li.iehover li a:hover {
+	background: #CCC;
+	color: #FFF;
+	}
+
+ul.appmenu ul ul,
+ul.appmenu ul ul ul {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 120px;
+	}
+
+/* Do Not Move - Must Come Before display:block for Gecko */
+ul.appmenu li:hover ul ul,
+ul.appmenu li:hover ul ul ul,
+ul.appmenu li.iehover ul ul,
+ul.appmenu li.iehover ul ul ul {
+	display: none;
+	}
+
+ul.appmenu li:hover ul,
+ul.appmenu ul li:hover ul,
+ul.appmenu ul ul li:hover ul,
+ul.appmenu li.iehover ul,
+ul.appmenu ul li.iehover ul,
+ul.appmenu ul ul li.iehover ul {
+	display: block;
+	}
+	
+.menu-page1-icon {
+    /*content: url(/images/gear.PNG);*/
+	border: 0px !important;
+	border right color: none !important;
+	border left color: none !important;
+	padding: 0 !important;
+	margin: 0;
+	/*position: relative;*/
+	/*height: 24px;*/
+
+}	
+
+div.navigation {
+	border: 1px solid #FFF;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	padding: 0 12px;
+	margin: 0;
+	
+	float: none !important; /*For Opera*/
+	/*float: left;*/ /*For IE*/
+	display: block;
+	background: #EEE;
+	color: #666;
+	font: bold 10px/22px Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	
+	height: auto !important;
+	/*height: 1%;*/ /*For IE*/
+	
+	
+	
+}	
+	
+/* Root = Horizontal, Secondary = Vertical */
+ul.navigation {
+	margin: 0;
+	border: 0 none;
+	padding: 0;
+	width: 500px; /*For KHTML*/
+	list-style: none;
+	height: 24px;
+	float: left; 
+	
+	margin-top: -1px;
+	}
+
+ul.navigation li {
+	margin: 0;
+	border: 0 none;
+	padding: 0;
+	float: left; /*For Gecko*/
+	display: inline;
+	list-style: none;
+	position: relative;
+	height: 24px;
+	z-index:2;  /* needed to push menu over SlickGrid */
+	}
+
+ul.navigation ul {
+	margin: 0;
+	border: 0 none;
+	padding: 0;
+	width: 200px;
+	list-style: none;
+	display: none;
+	position: absolute;
+	top: 24px;
+	left: 0;
+	}
+
+ul.navigation ul:after /*From IE 7 lack of compliance*/{
+	clear: both;
+	display: block;
+	font: 1px/0px serif;
+	content: ".";
+	height: 0;
+	visibility: hidden;
+	}
+
+ul.navigation ul li {
+	width: 200px;
+	float: left; /*For IE 7 lack of compliance*/
+	display: block !important;
+	display: inline; /*For IE*/
+	}
+
+/* Root Menu */
+ul.navigation a {
+	border: 1px solid #FFF;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	padding: 0 6px;
+	float: none !important; /*For Opera*/
+	float: left; /*For IE*/
+	display: block;
+	background: #EEE;
+	color: #666;
+	font: bold 10px/22px Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	height: auto !important;
+	height: 1%; /*For IE*/
+	}
+
+/* Root Menu Hover Persistence */
+ul.navigation a:hover,
+ul.navigation li:hover a,
+ul.navigation li.iehover a {
+	background: #CCC;
+	color: #FFF;
+	}
+
+/* Root Menu Active indication */
+/*ul.navigation li.active a {
+	background: #CCC;
+	color: #000;
+	}*/
+
+/* 2nd Menu */
+ul.navigation li:hover li a,
+ul.navigation li.iehover li a {
+	float: none;
+	background: #EEE;
+	color: #666;
+	}
+
+/* 2nd Menu Hover Persistence */
+ul.navigation li:hover li a:hover,
+ul.navigation li:hover li:hover a,
+ul.navigation li.iehover li a:hover,
+ul.navigation li.iehover li.iehover a {
+	background: #CCC;
+	color: #FFF;
+	}
+
+/* 3rd Menu */
+ul.navigation li:hover li:hover li a,
+ul.navigation li.iehover li.iehover li a {
+	background: #EEE;
+	color: #666;
+	}
+
+/* 3rd Menu Hover Persistence */
+ul.navigation li:hover li:hover li a:hover,
+ul.navigation li:hover li:hover li:hover a,
+ul.navigation li.iehover li.iehover li a:hover,
+ul.navigation li.iehover li.iehover li.iehover a {
+	background: #CCC;
+	color: #FFF;
+	}
+
+/* 4th Menu */
+ul.navigation li:hover li:hover li:hover li a,
+ul.navigation li.iehover li.iehover li.iehover li a {
+	background: #EEE;
+	color: #666;
+	}
+
+/* 4th Menu Hover */
+ul.navigation li:hover li:hover li:hover li a:hover,
+ul.navigation li.iehover li.iehover li.iehover li a:hover {
+	background: #CCC;
+	color: #FFF;
+	}
+
+ul.navigation ul ul,
+ul.navigation ul ul ul {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 200px;
+	}
+
+/* Do Not Move - Must Come Before display:block for Gecko */
+ul.navigation li:hover ul ul,
+ul.navigation li:hover ul ul ul,
+ul.navigation li.iehover ul ul,
+ul.navigation li.iehover ul ul ul {
+	display: none;
+	}
+
+ul.navigation li:hover ul,
+ul.navigation ul li:hover ul,
+ul.navigation ul ul li:hover ul,
+ul.navigation li.iehover ul,
+ul.navigation ul li.iehover ul,
+ul.navigation ul ul li.iehover ul {
+	display: block;
+	}
+
+
+
+
+
+
+
+

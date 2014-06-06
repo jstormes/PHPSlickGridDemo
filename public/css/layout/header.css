@@ -1,0 +1,88 @@
+@CHARSET "UTF-8";
+
+/* Layout for all pages the use the header and menu logic.
+    This is the structural CSS for the /application/layouts/scripts/header.phtml
+    file.
+  
+  +--------------------------------------------------------------------------------------+
+  ||--------------------||----------------------------------------||--------------------||
+  || div.header_left    || div.header_center                      || div.header_right   ||
+  ||                    ||                                        ||                    ||
+  ||                    ||                                        ||                    ||
+  ||--------------------||----------------------------------------||--------------------||
+  |                                                                                      |
+  |                                                                                      |
+ 
+ 
+ */
+
+/* Default Computer Screen ( Mouse Driven )*/
+.navbar {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	min-height: 22px;
+	height: 22px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	border-color: rgb(231, 231, 231);
+	border-top: 1px solid rgb(231, 231, 231);
+	
+}
+
+.navbar-nav>li>a {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+
+.navbar-collapse {
+	/*border-top: 1px solid;*/
+}
+
+.navbar-brand {
+	display: none;
+} 
+
+/* Pad and Phone Screen ( Touch Driven) */
+/* Reset back to Bootstrap defaults */
+@media ( max-width : 991px) {
+	#header { /*   font-size: 21px; */
+		border-bottom: 1px solid black;
+	}
+	.navbar {
+		position: static;
+		bottom: 0;
+		width: 100%;
+		min-height: 50px;
+		margin-bottom: 00px;
+		border: 1px solid transparent;
+	}
+	.navbar-nav>ul {
+		/*z-index: 1000;*/
+		background: #ffffff;
+	}
+	.navbar-nav>li {
+		/*z-index: 1000;*/
+		/*background: #ffffff;*/
+		/* this fixes transparent menu in small format but messes up med format*/
+	}
+	.navbar-nav>li>a {
+		padding-top: 13px  !important;
+		padding-bottom: 15px  !important;
+	}
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		max-height: 340px;
+		background-color: white;
+	}
+	.navbar-brand {
+		display: block;
+	}
+	#header {
+		height: 50px; /* Our header is 50 px high */
+	}
+	#mainContent {
+		top: 52px; /* Start our mainContent below the header */
+	}
+}
+

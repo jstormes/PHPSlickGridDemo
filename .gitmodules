@@ -1,0 +1,6 @@
+[submodule "library/PHPSlickGrid"]
+	path = library/PHPSlickGrid
+	url = https://jstormes@github.com/jstormes/phpslickgrid.git
+[submodule "public/slickgrid"]
+	path = public/slickgrid
+	url = git@github.com:mleibman/SlickGrid.git

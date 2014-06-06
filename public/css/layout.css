@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+   border: 0;
+}
+
+#wrapper {
+   min-height:100%;
+   position:relative;
+   _height: 100%; /* IE hack */
+}
+
+div.header {
+
+}
+
+div#mainContent {
+	padding-bottom: 22px;
+}
+
+div.footer {
+	position: absolute;
+	bottom: 2;
+	width: 100%;
+	height: 20px;
+}
+
+img.logo {
+	padding: 5px;
+	float: left;
+}
+
+div.userid {
+	font: 14px Helvetica, Arial, sans-serif;text-decoration:none;
+}
+
+.topnav {
+	float: right;
+	padding-right: 20px;
+}
+
+.page-break  { display: none; }
+

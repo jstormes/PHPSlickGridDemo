@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      
+      <?php echo (isset($this->metaCustom))?$this->metaCustom:""; ?>
+      
+        <?php echo $this->headTitle(); ?>
+        
+        <?php echo $this->headLink(); ?>
+        
+        <?php echo $this->headStyle(); ?>
+        
+        <?php echo $this->headScript(); ?>
+        
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="/js/html5shiv.js"></script>
+          <script src="/js/respond.min.js"></script>
+        <![endif]-->
+    
+  </head>
+<body>
+
+<?php echo $this->layout()->content; ?>
+
+</body>
+<?php echo $this->inlineScript(); ?>
+</html>

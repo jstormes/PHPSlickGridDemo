@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+
+html, body {
+	background: white;
+	font:12pt arial,sans-serif;
+	
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+
+div.header {
+	display: none;
+}
+
+img.logo {
+    display: none;
+}
+
+.topnav {
+	display: none;
+}
+
+.userid {
+	display: none;
+}
+
+div.footer {
+	font-size:8pt;
+	padding:3px;
+}
+
+.noPrint {
+	display: none;
+}
+
+.page-break  { display: block; page-break-before: always; }
