@@ -17,3 +17,22 @@ PHPSlickGrid picks up on the server side where SlickGrid stops, connecting Slick
 
 * Is read/write by default.
 
+## Quick Start:
+
+This repository uses submodules, so in addition to cloning, you will need to initialize and update the submodules:
+
+```
+git clone https://github.com/jstormes/PHPSlickGridDemo.git
+
+cd PHPSlickGridDemo 
+
+git submodule init
+
+git submodule update
+```
+
+After you pull down the code and setup your DNS and Apache host, you will need to setup the sample database using the file /docs/sclick_demo1.sql.
+
+Finally, you will need to add the MySQL user id and password to the file /application/configs/application.ini.
+
+
