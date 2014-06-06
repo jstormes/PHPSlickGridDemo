@@ -1,4 +1,5 @@
-phpslickgriddemo
-================
+PHPSlickGrid Demo
+=================
 
-Basic demo of PHP SlickGrid in the 1.12 Zend Framework
+Basic demo of PHPSlickGrid in the 1.12 Zend Framework
+
