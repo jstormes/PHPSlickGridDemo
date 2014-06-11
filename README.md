@@ -7,15 +7,15 @@ Live Demo at [http://www.phpslickgrid.com](http://www.phpslickgrid.com).
 
 ## Features: 
 
-* Is an extension to the excellent SlickGrid JavaScript gird/spreadsheet component [SlickGrid](https://github.com/mleibman/SlickGrid).
+* Server side extension to [SlickGrid](https://github.com/mleibman/SlickGrid).
 
 * Provides a strong browser side caching mechanism.
 
-* Synchronizes data between grids for each browser, providing for live updates.
+* Synchronizes data between grids, allowing live updates between users.
 
-* Allows each browser to customize the grid, sorting, sizing and positioning columns independent of the other users.
+* Allows each user to customize the grid, sorting, sizing and positioning columns independent of the other users.
 
-* Holds users place, when the user reopens the grid, it will attempt to restore the view exactly as it was left.
+* Holds the users place, when the user reopens the grid, it will attempt to restore the view exactly as it was.
 
 * Is read/write by default.
 
