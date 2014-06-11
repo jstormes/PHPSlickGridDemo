@@ -12,6 +12,9 @@ class IndexController extends Zend_Controller_Action
     public function indexAction()
     {
         // action body
+        
+    	// Add styles for this example
+    	$this->view->headLink()->appendStylesheet('examples.css','screen');
 
     }
 

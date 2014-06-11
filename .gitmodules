@@ -3,4 +3,4 @@
 	url = https://jstormes@github.com/jstormes/phpslickgrid.git
 [submodule "public/slickgrid"]
 	path = public/slickgrid
-	url = git@github.com:mleibman/SlickGrid.git
+url=https://github.com/mleibman/SlickGrid.git

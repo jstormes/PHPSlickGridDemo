@@ -5,7 +5,7 @@ PHPSlickGrid picks up on the server side where SlickGrid stops, connecting Slick
 
 ## Features: 
 
-* Is an extension to the excellent SlickGrid JavaScript gird/spreadsheet component. [SlickGrid](https://github.com/mleibman/SlickGrid)
+* Is an extension to the excellent SlickGrid JavaScript gird/spreadsheet component [SlickGrid](https://github.com/mleibman/SlickGrid).
 
 * Provides a strong browser side caching mechanism.
 
@@ -31,8 +31,8 @@ git submodule init
 git submodule update
 ```
 
-After you pull down the code and setup your DNS and Apache host, you will need to setup the sample database using the file /docs/sclick_demo1.sql.
+You will to have the Zend Framework 1.12 setup and you will need to point Apache to the /public directory.  Setup the sample database using the file /docs/sclick_demo1.sql.
 
 Finally, you will need to add the MySQL user id and password to the file /application/configs/application.ini.
 
-
+NOTE: You may need to modify .htaccess in the /public directory.
