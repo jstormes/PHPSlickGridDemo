@@ -19,6 +19,8 @@ Live Demo at [http://www.phpslickgrid.com](http://www.phpslickgrid.com).
 
 * Is read/write by default.
 
+* Interfaces easily with Zend_Db_Table.
+
 ## Quick Start:
 
 This repository uses submodules, so in addition to cloning, you will need to initialize and update the submodules:
@@ -32,8 +34,6 @@ git submodule init
 
 git submodule update
 ```
-
-You will to have the Zend Framework 1.12 setup and you will need to point Apache to the /public directory.  Setup the sample database using the file /docs/sclick_demo1.sql.
 
 Finally, you will need to add the MySQL user id and password to the file /application/configs/application.ini.
 
