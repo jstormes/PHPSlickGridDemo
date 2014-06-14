@@ -1,0 +1,36 @@
+<style>
+/* Active row highlight color */
+.slick-row.active .slick-cell {
+     background-color: #FFB;
+}
+</style>
+
+
+<table width="100%">
+  <tr>
+    <td valign="top" width="50%">
+    	<!-- Instantiate the PHPSlickGrid view helper -->
+    	<?php echo $this->PHPSlickGrid($this->model,null,'width:600px;height:500px;'); ?>
+    	<!-- End of code from the PHPSlickGrid view helper -->
+    	
+    	<?php echo $this->HeaderMenu('filter',$this->model,$this->filterOptions); ?>
+    	<?php echo $this->HeaderMenu('admin',$this->model,$this->adminOptions); ?>
+    	<?php echo $this->HeaderMenu('users',$this->model,$this->usersOptions); ?>
+    	
+    </td>
+    <td valign="top">
+      <h2>Demonstrates:</h2>
+      <ul>
+        <li>Basic PHPSlickGrid with minimal configuration.</li>
+        <li>Simultaneous editing, user will see each others updates in real time.</li>
+		<li>Persistent data, data is stored into a database table.</li>
+		<li>Persistent sort and column arrangement, column position and sorts are kept between visits.</li>
+		<li>Persistent active row, the last active row is kept between visits and sorts.</li>
+      </ul>
+        <h2>View Source:</h2>
+        <ul>
+            <li><A href="https://github.com/jstormes/phpslickgriddemo/tree/master" target="_sourcewindow"> Get the source from Github</a></li>
+        </ul>
+    </td>
+  </tr>
+</table>
