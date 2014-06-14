@@ -32,11 +32,12 @@ class Example2Controller extends Zend_Controller_Action
     	// Add SlickGrid assets
     	$this->view->headScript()->appendFile('/slickgrid/slick.core.js');
     	$this->view->headScript()->appendFile('/slickgrid/slick.grid.js');
-    	$this->view->headLink()->appendStylesheet('/slickgrid/slick.grid.css','screen, print');
+//    	$this->view->headLink()->appendStylesheet('/slickgrid/slick.grid.css','screen, print');
     	
     	// Add PHPSlickGrid assets
     	$this->view->headScript()->appendFile('/phpslickgrid/js/json/datacache.js');
-    	$this->view->headScript()->appendFile('/phpslickgrid/js/editors/mysql.js');    	
+    	$this->view->headScript()->appendFile('/phpslickgrid/js/editors/mysql.js');   
+    	$this->view->headLink()->appendStylesheet('/phpslickgrid/css/phpslickgrid.css','screen, print');
     	
     	// Add styles for this example
     	$this->view->headLink()->appendStylesheet('examples.css','screen');
@@ -52,9 +53,9 @@ class Example2Controller extends Zend_Controller_Action
     	 
     	$this->view->headLink()->appendStylesheet('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css','screen');
 		
-    	$this->view->filterOptions = array("icon"=>"<i style='font-family:FontAwesome;' class='fa fa-caret-down fa-1x'></i>");
-    	$this->view->adminOptions = array("icon"=>"<i style='font-family:FontAwesome;' class='fa fa-cog fa-1x'></i>");
-    	$this->view->usersOptions = array("icon"=>"<i style='font-family:FontAwesome;' class='fa fa-users fa-1x'></i>");
+    	$this->view->filterOptions = array("icon"=>"<i class='fa fa-caret-down fa-1x'></i>");
+    	$this->view->adminOptions = array("icon"=>"<i class='fa fa-cog fa-1x'></i>");
+    	$this->view->usersOptions = array("icon"=>"<i class='fa fa-users fa-1x'></i>");
     }
     
     public function jsonAction()
