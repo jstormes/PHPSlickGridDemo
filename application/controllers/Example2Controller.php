@@ -36,7 +36,8 @@ class Example2Controller extends Zend_Controller_Action
     	
     	// Add PHPSlickGrid assets
     	$this->view->headScript()->appendFile('/phpslickgrid/js/json/datacache.js');
-    	$this->view->headScript()->appendFile('/phpslickgrid/js/editors/mysql.js');   
+    	$this->view->headScript()->appendFile('/phpslickgrid/js/editors/mysql.js');  
+    	// This next line replaces  /slickgrid/slick.grid.css
     	$this->view->headLink()->appendStylesheet('/phpslickgrid/css/phpslickgrid.css','screen, print');
     	
     	// Add styles for this example
@@ -53,6 +54,20 @@ class Example2Controller extends Zend_Controller_Action
     	 
     	$this->view->headLink()->appendStylesheet('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css','screen');
 		
+    	
+    	// Ideas for HeaderMenu
+    	//$filter_menu = new PHPSlickGrid.HeaderMenu($this->model);
+    	//$filter_menu->icon = "<i class='fa fa-caret-down fa-1x'></i>";
+    	//$filter_menu->addPlugin(new PHPSlickGrid.HeaderMenu.CheboxFilter());
+    	//$filter_menu->addPlugin(new PHPSlickGrid.HeaderMenu.BootStrapModel('SuperFilter'));
+    	//$this->view->$filter_menu = $filter_menu;
+    	
+    	// Ideas for HeaderModel
+    	//$admin_menu = new PHPSlickGrid.HeaderModel('ColumnAdminScreen');
+    	//$this->view->admin_menu = $admin_menu;
+    	
+    	
+    	
     	$this->view->filterOptions = array("icon"=>"<i class='fa fa-caret-down fa-1x'></i>");
     	$this->view->adminOptions = array("icon"=>"<i class='fa fa-cog fa-1x'></i>");
     	$this->view->usersOptions = array("icon"=>"<i class='fa fa-users fa-1x'></i>");
