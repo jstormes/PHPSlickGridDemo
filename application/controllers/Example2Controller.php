@@ -3,6 +3,12 @@
 class Example2Controller extends Zend_Controller_Action
 {
 
+	/**
+	 * 
+	 * @var PHPSlickGrid_Db_Table_Abstract
+	 */
+	public $model;
+	
     public function init()
     {
         /* Initialize action controller here */
@@ -56,11 +62,14 @@ class Example2Controller extends Zend_Controller_Action
 		
     	
     	// Ideas for HeaderMenu
-    	//$filter_menu = new PHPSlickGrid.HeaderMenu($this->model);
-    	//$filter_menu->icon = "<i class='fa fa-caret-down fa-1x'></i>";
-    	//$filter_menu->addPlugin(new PHPSlickGrid.HeaderMenu.CheboxFilter());
-    	//$filter_menu->addPlugin(new PHPSlickGrid.HeaderMenu.BootStrapModel('SuperFilter'));
+    	$filter_menu = new PHPSlickGrid_Plugins_HeaderMenu();
+    	$filter_menu->icon = "<i class='fa fa-caret-down fa-1x'></i>";
+    	//$filter_menu->addPlugin(new PHPSlickGrid_Plugins_HeaderMenu_HTML("test"));
+    	//$filter_menu->addPlugin(new PHPSlickGrid.HeaderMenuItem.CheboxFilter());
+    	//$filter_menu->addPlugin(new PHPSlickGrid.HeaderMenuItem.BootStrapModel('SuperFilter'));
     	//$this->view->$filter_menu = $filter_menu;
+    	
+    	$this->model->AddPlugin($filter_menu);
     	
     	// Ideas for HeaderModel
     	//$admin_menu = new PHPSlickGrid.HeaderModel('ColumnAdminScreen');
