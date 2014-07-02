@@ -55,31 +55,33 @@ class Example2Controller extends Zend_Controller_Action
     	
     	
     	// Add our header menu
-    	$this->view->headScript()->appendFile('/phpslickgrid/js/headermenu/headermenu.js');
-    	$this->view->headLink()->appendStylesheet('/phpslickgrid/js/headermenu/headermenu.css','screen');
+    	$this->view->headScript()->appendFile('/phpslickgrid/headerplugins/menubutton.js');
+    	$this->view->headLink()->appendStylesheet('/phpslickgrid/headerplugins/menubutton.css','screen');
+    	
+    	//$this->view->headScript()->appendFile('/phpslickgrid/js/headermenu/html.js');
     	 
     	$this->view->headLink()->appendStylesheet('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css','screen');
 		
     	
-    	// Ideas for HeaderMenu
-    	$filter_menu = new PHPSlickGrid_Plugins_HeaderMenu();
+    	// Filter Menu
+    	$filter_menu = new PHPSlickGrid_HeaderPlugins_MenuButton();
+    	$filter_menu->Columns(array('column1','column2'));
+    	//$filter_menu->IgnoreColumns(array('column1','column2'));
     	$filter_menu->icon = "<i class='fa fa-caret-down fa-1x'></i>";
-    	//$filter_menu->addPlugin(new PHPSlickGrid_Plugins_HeaderMenu_HTML("test"));
-    	//$filter_menu->addPlugin(new PHPSlickGrid.HeaderMenuItem.CheboxFilter());
-    	//$filter_menu->addPlugin(new PHPSlickGrid.HeaderMenuItem.BootStrapModel('SuperFilter'));
-    	//$this->view->$filter_menu = $filter_menu;
-    	
+    	//$filter_menu->AddPlugin(new PHPSlickGrid_Plugins_HeaderMenu_HTML('/* Hello World */'));
+    	//$filter_menu->AddPluginToColumns(array('ColumnName','collumnName'),new SomePlugin());
     	$this->model->AddPlugin($filter_menu);
     	
-    	// Ideas for HeaderModel
-    	//$admin_menu = new PHPSlickGrid.HeaderModel('ColumnAdminScreen');
-    	//$this->view->admin_menu = $admin_menu;
+    	// Administrator Menu
+    	//$admin_menu = new PHPSlickGrid_Plugins_HeaderMenu();
+    	//$admin_menu->icon = "<i class='fa fa-cog fa-1x'></i>";
+    	//$this->model->AddPlugin($admin_menu);
     	
-    	
-    	
-    	$this->view->filterOptions = array("icon"=>"<i class='fa fa-caret-down fa-1x'></i>");
-    	$this->view->adminOptions = array("icon"=>"<i class='fa fa-cog fa-1x'></i>");
-    	$this->view->usersOptions = array("icon"=>"<i class='fa fa-users fa-1x'></i>");
+    	// User Access Menu
+    	//$users_menu = new PHPSlickGrid_Plugins_HeaderMenu();
+    	//$users_menu->icon = "<i class='fa fa-users fa-1x'></i>";
+    	//$this->model->AddPlugin($users_menu);
+
     }
     
     public function jsonAction()
