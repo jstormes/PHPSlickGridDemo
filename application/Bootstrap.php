@@ -41,6 +41,29 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		//Zend_Registry::get('log')->alert("this is a alert log test");
 		//Zend_Registry::get('log')->emerg("this is a emerg log test");	// Most severe
 	}
+	
+	protected function _initDatabase()
+	{
+		// Stup our default database connection
+		$this->bootstrap('db');
+		$db = $this->getPluginResource('db');
+		
+		// force UTF-8 connection
+		$stmt = new Zend_Db_Statement_Pdo(
+				$db->getDbAdapter(),
+				"SET NAMES utf8;"
+		);
+		$stmt->execute();
+		
+		// Query profiler (if enabled and not in production)
+		$options = $db->getOptions();
+		if ($options['profiler']['enabled'] == true) {
+			$profilerClass 	= $options['profiler']['class'];
+			$profiler 		= new $profilerClass('All DB Queries');
+			$profiler->setEnabled(true);
+			$db->getDbAdapter()->setProfiler($profiler);
+		}
+	}
 
 }
 
