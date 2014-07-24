@@ -68,8 +68,8 @@ class Example2Controller extends Zend_Controller_Action
     	$filter_menu = new PHPSlickGrid_HeaderPlugins_MenuButton();
     	$filter_menu->Columns(array('column1','column2'));
     	$filter_menu->icon = "<i class='fa fa-caret-down fa-1x'></i>";
-    	$filter_menu->AddPlugin(new PHPSlickGrid_HeaderPlugins_MenuItems_HTML('<div> Hello World </div>'));
-    	$filter_menu->AddPlugin(new PHPSlickGrid_HeaderPlugins_MenuItems_HTML('test two<hr/>'));
+    	//$filter_menu->AddPlugin(new PHPSlickGrid_HeaderPlugins_MenuItems_HTML('<div> Hello World </div>'));
+    	//$filter_menu->AddPlugin(new PHPSlickGrid_HeaderPlugins_MenuItems_HTML('test two<hr/>'));
     	$filter_menu->AddPlugin(new PHPSlickGrid_HeaderPlugins_MenuItems_ListFilter());
     	$this->model->AddPlugin($filter_menu);
     	
