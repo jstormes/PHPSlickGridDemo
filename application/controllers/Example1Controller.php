@@ -2,11 +2,12 @@
 
 class Example1Controller extends Zend_Controller_Action
 {
+	
 
     public function init()
     {
         /* Initialize action controller here */
-      	
+    	
     	// Setup our grid
     	$this->model = new Application_Model_Example1();
     }
